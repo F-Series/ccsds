@@ -17,9 +17,21 @@
 package eu.dariolucia.ccsds.sle.utl.si.cltu;
 
 public enum CltuStatusEnum {
-	RADIATED,
-	EXPIRED,
-	INTERRUPTED,
-	PRODUCTION_STARTED,
-	PRODUCTION_NOT_STARTED
+	RADIATED(0),
+	EXPIRED(1),
+	INTERRUPTED(2),
+	//INVALID(3),
+	PRODUCTION_STARTED(4),
+	PRODUCTION_NOT_STARTED(5);
+
+	private final int code;
+
+	CltuStatusEnum(int code){
+		this.code = code;
+	}
+
+	public int getCode(){
+		return code;
+	}
+
 }
