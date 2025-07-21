@@ -1,5 +1,5 @@
 /*
- *   Copyright (c) 2019 Dario Lucia (https://www.dariolucia.eu)
+ *   Copyright (c) 2025 F-Series Project
  *      
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -301,7 +301,7 @@ public class CltuServiceInstanceProvider extends ServiceInstance {
         if(this.lastProcessed != null) {
             pdu.getCltuLastProcessed().setCltuProcessed(new eu.dariolucia.ccsds.sle.generated.ccsds.sle.transfer.service.cltu.structures.CltuLastProcessed.CltuProcessed());
             pdu.getCltuLastProcessed().getCltuProcessed().setCltuIdentification(new CltuIdentification(this.lastProcessed.getCltuIdentification()));
-            pdu.getCltuLastProcessed().getCltuProcessed().setCltuStatus(new CltuStatus(this.lastProcessed.getCltuStatus().ordinal()));
+            pdu.getCltuLastProcessed().getCltuProcessed().setCltuStatus(new CltuStatus(this.lastProcessed.getCltuStatus().getCode()));
             pdu.getCltuLastProcessed().getCltuProcessed().setStartRadiationTime(new ConditionalTime());
             if(this.lastProcessed.getRadiationStartTime() == null) {
                 pdu.getCltuLastProcessed().getCltuProcessed().getStartRadiationTime().setUndefined(new BerNull());
@@ -1182,7 +1182,7 @@ public class CltuServiceInstanceProvider extends ServiceInstance {
         } else {
             pdu.getCltuLastProcessed().setCltuProcessed(new eu.dariolucia.ccsds.sle.generated.ccsds.sle.transfer.service.cltu.structures.CltuLastProcessed.CltuProcessed());
             pdu.getCltuLastProcessed().getCltuProcessed().setCltuIdentification(new CltuIdentification(this.lastProcessed.getCltuIdentification()));
-            pdu.getCltuLastProcessed().getCltuProcessed().setCltuStatus(new CltuStatus(this.lastProcessed.getCltuStatus().ordinal()));
+            pdu.getCltuLastProcessed().getCltuProcessed().setCltuStatus(new CltuStatus(this.lastProcessed.getCltuStatus().getCode()));
             pdu.getCltuLastProcessed().getCltuProcessed().setStartRadiationTime(new ConditionalTime());
             if(this.lastProcessed.getRadiationStartTime() == null) {
                 pdu.getCltuLastProcessed().getCltuProcessed().getStartRadiationTime().setUndefined(new BerNull());

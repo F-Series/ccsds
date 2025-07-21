@@ -1,5 +1,5 @@
 /*
- *  Copyright 2018-2019 Dario Lucia (https://www.dariolucia.eu)
+ *  Copyright 2025 F-Series Project
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -22,4 +22,21 @@ public enum CltuStatusEnum {
 	INTERRUPTED,
 	PRODUCTION_STARTED,
 	PRODUCTION_NOT_STARTED
+	RADIATED(0),
+	EXPIRED(1),
+	INTERRUPTED(2),
+	//INVALID(3),
+	PRODUCTION_STARTED(4),
+	PRODUCTION_NOT_STARTED(5);
+
+	private final int code;
+
+	CltuStatusEnum(int code){
+		this.code = code;
+	}
+
+	public int getCode(){
+		return code;
+	}
+
 }
